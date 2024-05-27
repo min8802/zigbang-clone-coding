@@ -1,3 +1,39 @@
+@import url('//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    .top-big-font {
+        font-size: 17px;
+        color: rgb(34, 34, 34);
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.53;
+        letter-spacing: normal;
+        font-family: 'Spoqa Han Sans', sans-serif;
+    }
+    .top-small-font {
+        font-size: 12px;
+        color: rgb(34, 34, 34);
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.42;
+        letter-spacing: normal;
+        font-family: 'Spoqa Han Sans', sans-serif;
+    }
+    .top-li-style {
+        padding-left: 15px;
+        padding-top: 19px;
+        padding-right: 15px;
+        padding-bottom: 17px;
+        display: flex;
+        flex-direction: column;
+        margin-right: 15px;
+        line-height: 18px;
+    }
+}
+
