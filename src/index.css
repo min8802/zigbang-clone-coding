@@ -55,6 +55,18 @@
         display: flex;
         justify-content: center;
     }
+
+    .banner-click-font {
+        font-family: 'Spoqa Han Sans', sans-serif;
+        font-size: 17px;
+        color: rgb(5, 55, 45);
+        font-weight: bold;
+        text-shadow: rgb(255, 255, 255) 0px 16px 40px;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        z-index: 10;
+    }
     .board-font {
         font-family: 'Spoqa Han Sans', sans-serif;
         font-size: 17px;

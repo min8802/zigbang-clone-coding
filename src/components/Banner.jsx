@@ -1,4 +1,15 @@
+import { useEffect } from "react";
+import { useState } from "react";
+
 const Banner = () => {
+
+    const [selected, setSelected] = useState('아파트');
+
+    const onClickButton = (e) => {
+        setSelected(e.target.getAttribute("value"));
+    };
+
+ 
     return (
         <div className="w-full h-[460px] relative">
         <div className="">
@@ -11,11 +22,36 @@ const Banner = () => {
         </div>
         <div className="absolute bottom-0 left-1/2 w-[574px] h-[196px] -translate-x-1/2">
             <div className="h-10 bg-[#03142DD9] flex items-center mb-[26px] rounded-lg">
-              <div className="banner-small-font">아파트</div>
-              <div className="banner-small-font">빌라, 투룸+</div>
-              <div className="banner-small-font">원룸</div>
-              <div className="banner-small-font">오피스텔</div>
-              <div className="banner-small-font">상가</div>
+              <div className="banner-small-font relative">
+               <div className={`${selected === '아파트' ? 'banner-click-font' : 'banner-small-font'}`} value="아파트" onClick={(e) => onClickButton(e)}>
+                    아파트
+                </div>
+                {selected === "아파트" && <img className="absolute left-0 -top-2" src="../images/select_bubble.png"/>}
+              </div>
+              <div className="banner-small-font relative">
+               <div className={`${selected === '빌라' ? 'banner-click-font' : 'banner-small-font'}`} value="빌라" onClick={(e) => onClickButton(e)}>
+                    빌라, 투룸+
+                </div>
+                {selected === "빌라" && <img className="absolute left-0 -top-2" src="../images/select_bubble.png"/>}
+              </div>
+              <div className="banner-small-font relative">
+               <div className={`${selected === '원룸' ? 'banner-click-font' : 'banner-small-font'}`} value="원룸" onClick={(e) => onClickButton(e)}>
+                    원룸
+                </div>
+                {selected === "원룸" && <img className="absolute left-0 -top-2" src="../images/select_bubble.png"/>}
+              </div>
+              <div className="banner-small-font relative">
+               <div className={`${selected === '오피스텔' ? 'banner-click-font' : 'banner-small-font'}`} value="오피스텔" onClick={(e) => onClickButton(e)}>
+                    오피스텔
+                </div>
+                {selected === "오피스텔" && <img className="absolute left-0 -top-2" src="../images/select_bubble.png"/>}
+              </div>
+              <div className="banner-small-font relative">
+               <div className={`${selected === '상가' ? 'banner-click-font' : 'banner-small-font'}`} value="상가" onClick={(e) => onClickButton(e)}>
+                    상가
+                </div>
+                {selected === "상가" && <img className="absolute left-0 -top-2" src="../images/select_bubble.png"/>}
+              </div>
             </div>
             <div className="rounded-lg bg-[#FF681B] flex">
               <div className="w-[508px] pt-[17px] pr-7 pl-[29px] pb-[19px] h-15 bg-[#F2F2F2] rounded-bl-[8px] rounded-tl-[8px]">
