@@ -37,7 +37,7 @@ const Header = () => {
                 >
                     <span className="top-big-font">아파트</span>
                     <span className="top-small-font">매매/전월세/신축분양</span>
-                    <div id="" className={`top-dropdown-style transition duration-1000 ${isHover ? "bg-red-100 opacity-100" : "bg-blue-100 opacity-0"}`}>
+                    <div id="" className={`top-dropdown-style transition duration-500 ${isHover ? "bg-white opacity-100" : "bg-white opacity-0"}`}>
                         <div className="top-subDropdown-style">매매/전*월세</div>
                         <div className="top-subDropdown-style">신축분양</div>
                         <div className="top-subDropdown-style">인구흐름</div>
