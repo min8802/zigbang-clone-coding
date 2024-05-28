@@ -55,7 +55,9 @@ const Banner = () => {
             </div>
             <div className="rounded-lg bg-[#FF681B] flex">
               <div className="w-[508px] pt-[17px] pr-7 pl-[29px] pb-[19px] h-15 bg-[#F2F2F2] rounded-bl-[8px] rounded-tl-[8px]">
-                <input type="text" className="w-[447px] h-15 text-4 border-none bg-[#F2F2F2] leading-6 px-[2px] py-[1px]" placeholder="원하시는 지역명, 지하철역, 단지명(아파트명)을 입력해주세요"/>
+                <input type="text" className="w-[447px] h-15 text-4 border-none bg-[#F2F2F2] leading-6 px-[2px] py-[1px]" placeholder={`원하시는 지역명, 지하철역${
+                  selected === '아파트' ? ", 단지명(아파트명)" : 
+                  (selected === '오피스텔' ? "오피스텔명" : "")}을 입력해주세요`}/>
               </div>
               <div className="w-[66px] h-15 flex justify-center items-center">
                 <img className="w-7 h-8 object-cover" src="../images/ic_search.png"/>
